@@ -12,6 +12,7 @@
     <link rel="stylesheet" types="text.css" href="/css/skeleton.css">
     <link rel="stylesheet" types="text.css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   </head>
 
   <body class = "bodytemp" id="back-image">
@@ -20,28 +21,24 @@
 
 	<div class = "template">
     <div class = "template-header">
+
       <!-- <nav> -->
         <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
         <div class = "photomatic">Photomatic</div>
 
-          <a href = "/photo/upload">
+
+        <div class = "welcome">Welcome </div>
+
+          <a href = "photo/upload">
           <div class= "button" id="upload">Upload</div></a>
+
           <div class="button" id="signoff">Sign Off</div>
 
-      <!-- <nav>
-        <a href ="/">Home</a>
-        <a href = "/">Explore</a>
-        <a href = "photo/upload">Post</a>
-        <a href = "/login">Login</a>
-        <a href = "/signup">Signup</a>
-      </nav> -->
-
-      <!-- </nav> -->
 		 </div>
 
         <%/* TEMPLATE-MAIN */%>
 
-			    <%-include("pages/" + page, args);%>
+			   <%-include("pages/" + page, args);%>
 
       </div>
 

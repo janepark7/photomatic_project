@@ -30,7 +30,19 @@
 ** TEMPLATE
 ***/
 
+<<<<<<< HEAD
 
+=======
+.bodytemp {
+  display: flex;
+  flex-direction: column;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('/app-images/photomatic.jpg') center center fixed;
+}
+>>>>>>> d8cfb9ba49e4789686fef8109da6dccdbd3b79ed
 
 #back-image {
 
