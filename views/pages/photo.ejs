@@ -1,30 +1,19 @@
-<link rel="stylesheet" types="text.css" href="/css/normalize.css">
-<link rel="stylesheet" types="text.css" href="/css/skeleton.css">
-<link rel="stylesheet" types="text.css" href="/css/stylesheet.css">
-
-
-
 <div class="full-photo">
-
-
-    <img class="photo-full" src="<%- photo.getPreviewSrc() %>"/>
-		<div class="container description-container">
+  <img class="photo-full" src="<%- photo.getPreviewSrc() %>"/>
+    <div class="container description-container">
       <% if (photo.userId === args.id) { %>
-			    <form class="edit" name = "update" action= "/photo/update/<%- photo.get("id") %>"   method="POST">
-            <button class="edit-button button">Update Description</button>
-            <textarea class=  "photo-description-edit" name = "update"> <%- photo.get("description") %></textarea>
-          </form>
-        <% } else { %>
-				<p class=  "photo-description"> <%- photo.get("description") %></p>
-				<% } %>
-
-		</div>
-</div>
-
+  			<form class="edit" name="update" action="/photo/update/<%- photo.get("id") %>" method="POST">
+          <button class="edit-button button">Update Description</button>
+            <textarea class=  "photo-description-edit" name="update"> <%- photo.get("description") %></textarea>
+        </form>
+           <% } else { %>
+  		         <div class="photo-description"> <%- photo.get("description") %></div>
+  		           <% } %>
+    </div>
 
 <div class="container">
 	<div class="nine column">
-		<div class = "userexp">
+		<div class="userexp">
 
 			<% if (photo.userId === args.id) { %>
 			<a class="delete-button button" name="delete" data-photoid="<%- photo.get("id") %>">REMOVE PHOTO</a>
@@ -32,7 +21,7 @@
 
             <form id = "btn like" method= "POST" action= "/photo/like/<%- photo.get("id") %>">
                 <input name="photoid" type="hidden" value="<%- photo.get("id") %>"/>
-                    <button class = "photo-like">
+                    <button class="photo-like">
                     <span class= "likes fa fa-heart"> <%- likes %></span>
                     </button>
             </form>
@@ -50,15 +39,15 @@
          <div class="comments-comment">
 
             <div class ="username">
-             <b><font color="#4fabc9"><%= comments[i].user.get("username") %> says:</font></b>
+             <%= comments[i].user.get("username")%>:
             </div>
 
              <div class="comments-comment-text">
                  <%- comments[i].get("text") %>
              </div>
          </div>
-     <% } %>
- <% } else { %>
+         <% } %>
+          <% } else { %>
      <p class="comments-empty">No comments here!</p>
  <% } %>
 
@@ -67,4 +56,5 @@
 
 </div>
 	</div>
+</div>
 </div>

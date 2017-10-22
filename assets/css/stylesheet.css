@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	background: linear-gradient(to bottom right, #faf9d1, #86BFAD);
+}
+
 /*
 ** LANDING PAGE
 ***/
@@ -131,17 +135,10 @@ width: 100%;
 **
 ***/
 
-.welcome {
-	float: left;
-	font-weight: normal;
-	padding-left: 10px;
-	font-size: 22px;
-}
-
 .Form {
 	position: absolute;
 	margin: 0 auto;
-	width: 30%;
+	width: 38%;
 	padding: 20px;
 	background: #FFF;
 	border: 1px solid #CCC;
@@ -150,29 +147,30 @@ width: 100%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 18px;
-	color: black;
+	color: #000000;
+	text-align: center;
 }
 
-.username, .password {
+.username-form, .password-form, .password-conf-form {
 	font-weight: bold;
 }
 
 .login-password, .login-username,
 .signup-username, .signup-password,
 .signup-conf-password {
-	font-style: italic;
+	text-align: center;
+	width: 90%;
 }
 
 input, textarea
 			 {
 				display: block;
-				width: 60%;
-				height: 40%;
+				width: 45%;
+				height: 30%;
 				display: block;
 			  margin-left: auto;
 			  margin-right: auto;
 			}
-
 
 .submit {
 	background-color: #4fabc9;
@@ -224,13 +222,15 @@ margin-right: auto;
 }
 
 .username {
-	text-align: center;
-	font-weight: bold;
 	color: #4fabc9;
+	font-weight: bold;
+	/*font-weight: bold;*/
+	/*color: #4fabc9;*/
 }
 
 .comments-comment-text {
 	word-wrap: break-word;
+	margin-left: 40%;
 }
 
 .userexp {
@@ -306,21 +306,27 @@ a:link {
 ** GALLERY IMAGE AND PHOTO PAGE
 ***/
 
-img {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
+.gallery {
+	float: left;
+	margin: 5px;
+	padding: 10px 5px 5px 5px;
+	width: 100%;
+}
+
+.gallery-image {
+	border: 1px solid #D0D0D0;
+	display: inline;
 }
 
 button {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-	float: inherit;
+	display: inline-block;
+	margin: 0 auto;
+	float: none;
 }
 
 .photo-full {
 	display: block;
+	margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -332,17 +338,10 @@ button {
 	text-align: center;
 }
 
-.description-container {
-
-}
 
 .photo-description-edit {
 	height: 14px;
 	width: 600px;
-}
-
-.gallery-image {
-	padding-top: 10px;
 }
 
 #gallery {

@@ -3,8 +3,8 @@
 <link rel="stylesheet" types="text.css" href="/css/skeleton.css">
 <link rel="stylesheet" types="text.css" href="/css/stylesheet.css">
 
-<body style="background:url('<%- photo.getPreviewSrc() %>'); background-repeat:no-repeat;background-size:cover;
- ">
+<!-- <body style="background:url('<%- photo.getPreviewSrc() %>'); background-repeat:no-repeat;background-size:cover;
+ "> -->
 
 <form class = "commentForm" method = "POST" id = "comment-form" action="/photo/comment" >
 
@@ -18,6 +18,6 @@
 		<input name="photoId" type="hidden" value="<%- photo.get("id") %>"/>
 </p>
 
-	<button class ="submit">Submit</button>
+	<button class="submit">Submit</button>
 </form>
 </body>
