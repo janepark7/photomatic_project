@@ -1,44 +1,28 @@
 <head>
   <title>Photomatic</title>
-
-<%/* CSS */%>
-
   <meta name="viewport" content="width-device-width, initial scale=1">
   <link rel="stylesheet" types="text.css" href="/css/cssReset.css">
-  <link rel="stylesheet" types="text.css" href="/css/stylesheet.css">
   <link rel="stylesheet" types="text.css" href="/css/normalize.css">
   <link rel="stylesheet" types="text.css" href="/css/skeleton.css">
+  <link rel="stylesheet" types="text.css" href="/css/stylesheet.css">
   <link rel="stylesheet" types="text.css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="/app-images/favicon-camera.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
-<body class = "bodytemp" id="back-image">
-
-<%/* NAVIGATION BAR */%>
-
-  <div class = "template-header">
-
-
-      <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
-      <div class = "photomatic">Photomatic</div>
-
-
-        <a href = "/user/signup">
-        <div class= "button" id="signup">Sign Up</div></a>
-
-        <a href ="/user/login">
-        <div class="button" id="login">Login</div></a>
-
-
+<body id="landing">
+  <div class="container">
+    <div class="intro">
+      <h1 class="land-head">Photomatic</h1>
+      <h3 class="sub-head">Share your photos automatically!</h3>
+      <ul>
+        <li>
+          <a href="/user/signup"><button class="sign-button">Sign Up</button></a>
+        </li>
+        <li>
+          <a href="/user/login"><button class="land-button">Log In</button></a>
+        </li>
+      </ul>
+      </div>
   </div>
-
-      <div class = "message">
-        Welcome to Photomatic!!! Share your photos automatically!
-        </div>
-
-      <footer>Photomatic 2017</footer>
-
-
-
 </body>

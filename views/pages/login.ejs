@@ -1,25 +1,22 @@
+<body id="form-page">
 
-<form class="Form" method="post">
-	<% if(typeof error !== undefined) { %>
-		<div class= "error"><%= error %></div>
-	<%}%>
-	<div class="username-form">
-		Username
-	</div>
-		<input class="login-username" type="text" name ="username"
-		placeholder="Please Enter Your Username"></input><br>
-
-
-	<div class="password-form">
-		Password
-	</div>
-		<input class="login-password" type="password" name ="password"
-		placeholder="Please Enter Your Password"></input><br>
-
-
-	<button class="submit">Submit</button>
-
-</form>
-
-
-<script scr = "/assets/login.js"></script>
+	<form method="post" class="login">
+		<div class="container">
+			<% if(typeof error !== undefined) { %>
+				<h5 class="error"><%= error %></h5>
+			<%}%>
+			<div class="username-form">
+				<b>Username</b>
+				<input class="login-username" type="text" name ="username"
+					placeholder="Enter Username"></input>
+			</div>
+			<div class="password-form">
+				<b>Password</b>
+				<input class="login-password" type="password" name ="password"
+				placeholder="Enter Password"></input><br>
+			</div>
+			<button class="submit">Submit</button>
+		</div>
+	</form>
+	<script scr = "/assets/login.js"></script>
+</body>

@@ -3,12 +3,12 @@
 }
 
 body {
-	background: linear-gradient(to bottom right, #faf9d1, #86BFAD);
+	background: #f2f8fd;
 }
 
-/*
-** LANDING PAGE
-***/
+/*=======================
+====== LANDING PAGE =====
+=========================*/
 
 .message {
 	text-align: center;
@@ -20,14 +20,74 @@ body {
 	color: white;
 }
 
-/* ERROR PAGE TEXT
-**
-***/
+#landing::after {
+	content: "";
+	background: url('/app-images/photoback.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	opacity: 0.7;
+ 	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	position: absolute;
+	z-index: -1;
+}
+ul {
+	text-align: center;
+	position: relative;
+}
+
+li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+.land-head, h3 {
+	text-align: center;
+}
+
+h3 {
+	color: #ffffff;
+	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
+}
+
+.land-head {
+	margin-top: 3em;
+	color: #ffffff;
+	font-size: 5em;
+	text-transform: uppercase;
+	letter-spacing: 12px;
+	text-shadow: 0px 0px 18px rgba(0,0,0,0.9)
+}
+
+.sub-head {
+	letter-spacing: 3px;
+	text-transform: capitalize;
+}
+
+.sign-button {
+	margin-right: 15px;
+	background-color: #97ccf1;
+}
+
+.land-button {
+	margin-left: 15px;
+	background-color: #d9d9d9;
+}
+
+
+
+/* =======================
+==== ERROR PAGE TEXT =====
+==========================*/
 
 .error {
-    color:  #4fabc9;
-    text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
-		text-align: center;
+	color: #b20000;
+	letter-spacing: 2px;
+	padding: 15px;
+	text-transform: uppercase;
 }
 
 .errorphoto {
@@ -44,66 +104,31 @@ body {
 	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
 }
 
-/* TEMPLATE
-**
-***/
-
-.bodytemp {
-  display: flex;
-  flex-direction: column;
-	margin: 0;
-	padding: 0;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background: url('/app-images/photomatic.jpg') center center fixed;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
-#back-image {
-
-	/*filter: blur(8px);*/
-}
-
-.template-header {
-	background-color: #191919;
+.error-header {
+	background-color: #71acd6;
 	width: 100%;
 	height: 9%;
-	opacity: 0.6;
+	opacity: 0.8;
 	text-align: right;
-	padding: 10px 10px 10px 10px;
+	padding: 15px;
 	color: white;
 	position: fixed;
 }
 
-.template {
-	flex: 1 0	auto;
-	text-align: center;
-	min-height: 8%;
-	width: 100%;
-	margin: auto;
+/* ===================
+===== NAV BAR ========
+=================== */
+i {
+	float: left;
+}
+
+button {
+	color: #000000;
+	background-color: #a4d2f3;
 }
 
 #signup {
-	background-color: #4fabc9;
-	color: white;
-}
-
-#login {
-	color: white;
-	background-color: #4fabc9;
-}
-
-#logout {
-	color: white;
-	background-color: #4fabc9;
-}
-
-i {
-	float: left;
-	/*padding-top: 5px;
-	padding-left: 5px;*/
+	margin-right: 15px;
 }
 
 .photomatic {
@@ -111,8 +136,15 @@ i {
 	font-weight: bolder;
 	padding-left: 10px;
 	font-size: 22px;
-	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 	text-decoration: none;
+	color: #b1d9f4;
+}
+
+.photomatic:hover {
+	color: #f2f8fd;
 }
 
 .welcome {
@@ -123,58 +155,99 @@ i {
 }
 
 footer {
-color: white;
-text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
-text-align: center;
-position: fixed;
-bottom: 0;
-width: 100%;
+	color: #ffffff;
+	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	margin-top: 8rem;
 }
 
-/*Login Form & Sign Up Form
-**
-***/
+.template-header {
+	background-color: #19262f;
+	width: 100%;
+	height: 8%;
+	text-align: right;
+	padding: 10px;
+	color: white;
+	position: fixed;
+}
 
-.Form {
+.logout {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-left: 25px;
+}
+
+.logout:hover {
+	color: #f2f8fd;
+}
+
+/* ===========================
+== Login Form & Sign Up Form =
+===============================
+*/
+
+#form-page::after {
+	content: "";
+	background: url('/app-images/photoback.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	opacity: 0.7;
+ 	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	position: absolute;
+	z-index: -1;
+}
+
+form {
+	border-radius: 25px;
+	background: linear-gradient(to top, #c8cfd6, #f1f3f4);
 	position: absolute;
 	margin: 0 auto;
-	width: 38%;
-	padding: 20px;
-	background: #FFF;
-	border: 1px solid #CCC;
-	border-radius: 6px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+}
+
+.sign-up {
+	padding-left: 25px;
+	padding-bottom: 45px;
+	transform: translate(25%, 50%);
+	width: 65%;
+}
+
+.login {
+	width: 65%;
+	transform: translate(30%, 65%);
+	padding-bottom: 45px;
+}
+
+.username-form, .password-form,
+.password-conf-form {
 	font-size: 18px;
-	color: #000000;
-	text-align: center;
+	padding: 10px;
 }
 
-.username-form, .password-form, .password-conf-form {
-	font-weight: bold;
+.password-conf-form {
+	padding-bottom: 20px;
 }
 
-.login-password, .login-username,
-.signup-username, .signup-password,
-.signup-conf-password {
-	text-align: center;
-	width: 90%;
+input {
+	margin-left: 55px;
+	width: 65%;
 }
-
-input, textarea
-			 {
-				display: block;
-				width: 45%;
-				height: 30%;
-				display: block;
-			  margin-left: auto;
-			  margin-right: auto;
-			}
 
 .submit {
-	background-color: #4fabc9;
+	margin: 0 auto;
+	margin-left: 30%;
 }
+
 
 /* Upload Page
 **
@@ -186,21 +259,21 @@ input, textarea
 }
 
 .upload {
-position: absolute;
-margin: 0 auto;
-width: 30%;
-padding: 20px;
-background: #FFF;
-border: 1px solid #CCC;
-border-radius: 6px;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size: 18px;
-color: black;
-display: block;
-margin-left: auto;
-margin-right: auto;
+	position: absolute;
+	margin: 0 auto;
+	width: 30%;
+	padding: 20px;
+	background: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 6px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 18px;
+	color: black;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #upload {
@@ -224,8 +297,6 @@ margin-right: auto;
 .username {
 	color: #4fabc9;
 	font-weight: bold;
-	/*font-weight: bold;*/
-	/*color: #4fabc9;*/
 }
 
 .comments-comment-text {
@@ -265,7 +336,7 @@ margin-right: auto;
 }
 
 .comment {
-	background-color: #4fabc9;
+	background-color: #e5e5e5;
 	flex-wrap: wrap;
 }
 
@@ -276,9 +347,6 @@ margin-right: auto;
 .comments-comment-text {
 	padding: 3px 75px 75px 3px;
 	text-align: center;
-	/*display: block;
-	height: 30%;
-	width: 40%*/
 }
 
 .commentcontainer {
@@ -290,7 +358,7 @@ a:link {
 }
 
 .photo-like {
-	background-color: #4fabc9;
+	background-color: #e5e5e5;
 	flex-wrap: wrap;
 }
 
@@ -318,12 +386,6 @@ a:link {
 	display: inline;
 }
 
-button {
-	display: inline-block;
-	margin: 0 auto;
-	float: none;
-}
-
 .photo-full {
 	display: block;
 	margin-top: 3%;
@@ -332,9 +394,6 @@ button {
 }
 
 .photo-description {
-	/*display: block;
-  margin-left: auto;
-  margin-right: auto;*/
 	text-align: center;
 }
 
@@ -357,7 +416,7 @@ button {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #4fabc9;
+	background-color: #e5e5e5;
 	flex-wrap: wrap;
 	width: 200px;
 }
@@ -366,7 +425,7 @@ button {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #4fabc9;
+	background-color: #e5e5e5;
 	flex-wrap: wrap;
 }
 

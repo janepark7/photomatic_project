@@ -75,7 +75,7 @@ User.login = function(req) {
 						return user;
 					}
 					else {
-						throw new Error("Incorrect password");
+						throw new Error("Incorrect Password");
 					}
 				});
 			} else {

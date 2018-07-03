@@ -1,9 +1,9 @@
 require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
-const connectSessionSequelize = require('connect-session-sequelize');
+const express = require('express'),
+ 			bodyParser = require('body-parser'),
+ 			cookieParser = require('cookie-parser'),
+ 			session = require('express-session'),
+ 			connectSessionSequelize = require('connect-session-sequelize');
 
 
 const sql = require('./utility/sql.js');
