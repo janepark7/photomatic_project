@@ -17,12 +17,14 @@
 </head>
   <body>
     <div class="template-header">
-      <div class="container nav">
+      <div class="container">
         <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
           <a class="photomatic" href="/photo/gallery">
             Photomatic
           </a>
-        <div class="welcome">Welcome <%= args.username %></div>
+        <font class="welcome">
+          Welcome <%= args.username %>
+        </font>
           <a href="/photo/upload">
             <button class="upload-button">
               Upload
@@ -32,10 +34,9 @@
             Logout
           </a>
      </div>
+
+     <%-include("pages/" + page, args); %>
     </div>
-    <div class="container">
-       <%-include("pages/" + page, args);%>
-  </div>
   <footer>Photomatic 2017</footer>
   </body>
 </html>

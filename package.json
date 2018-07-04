@@ -25,6 +25,7 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
+    "ejs-lint": "^0.3.0",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
     "fs": "0.0.1-security",

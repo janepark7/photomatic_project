@@ -6,6 +6,10 @@ body {
 	background: #f2f8fd;
 }
 
+textarea {
+	resize: none;
+}
+
 /*=======================
 ====== LANDING PAGE =====
 =========================*/
@@ -31,7 +35,6 @@ body {
  	left: 0;
  	bottom: 0;
  	right: 0;
- 	position: absolute;
 	z-index: -1;
 }
 ul {
@@ -77,8 +80,6 @@ h3 {
 	background-color: #d9d9d9;
 }
 
-
-
 /* =======================
 ==== ERROR PAGE TEXT =====
 ==========================*/
@@ -123,7 +124,7 @@ i {
 }
 
 button {
-	color: #000000;
+	color: #19262f;;
 	background-color: #a4d2f3;
 }
 
@@ -152,20 +153,7 @@ button {
 	font-weight: normal;
 	padding-left: 10px;
 	font-size: 22px;
-}
-
-footer {
-	color: #ffffff;
-	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
-	text-align: right;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 1rem;
-	margin-top: 8rem;
+	letter-spacing: 2px;
 }
 
 .template-header {
@@ -187,6 +175,8 @@ footer {
 .logout:hover {
 	color: #f2f8fd;
 }
+
+/* ======= End Nav Bar  ======= */
 
 /* ===========================
 == Login Form & Sign Up Form =
@@ -249,41 +239,35 @@ input {
 }
 
 
-/* Upload Page
-**
-***/
+/* =============================
+==== UPLOAD FORM  AND PAGE =====
+================================ */
 
 .upload-container {
-	background: url('/app-images/vpolaroid.jpg') center center fixed;
-
+	background: url('/app-images/photoback.jpg') center fixed;
+	background-repeat: no-repeat;
 }
 
 .upload {
 	position: absolute;
-	margin: 0 auto;
-	width: 30%;
-	padding: 20px;
-	background: #FFF;
+	width: 55%;
 	border: 1px solid #CCC;
 	border-radius: 6px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 18px;
+	transform: translate(35%, 50%);
+	font-size: 14px;
 	color: black;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	padding-right: 12%;
+
 }
 
 #upload {
-	background-color: #4fabc9;
-	color: white;
-
+	margin-right: 25%;
+	color: #19262f;
 }
 
-.file {
-	width: 100%;
+.description-area {
+	width: 70%;
+	height: 2%;
 }
 
 /*
@@ -370,20 +354,17 @@ a:link {
 }
 
 
-/*
-** GALLERY IMAGE AND PHOTO PAGE
-***/
+/* ========================
+===== GALLERY IMAGE =======
+=========================== */
 
-.gallery {
-	float: left;
-	margin: 5px;
-	padding: 10px 5px 5px 5px;
-	width: 100%;
-}
 
 .gallery-image {
+	transform: translate(-4em, 30%);
 	border: 1px solid #D0D0D0;
 	display: inline;
+	width: 250px;
+	height: 200px;
 }
 
 .photo-full {
@@ -401,14 +382,6 @@ a:link {
 .photo-description-edit {
 	height: 14px;
 	width: 600px;
-}
-
-#gallery {
-	background-color: #4fabc9;
-	color: white;
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
@@ -435,24 +408,46 @@ a:link {
   margin-right: auto
 }
 
-/**********************
-******** PREVIEW ******
-************************/
+/*=======================
+======= PREVIEW =========
+=========================*/
 
-h5 {
+.preview-view {
+	position: absolute;
+}
+.description-preview {
 	text-align: center;
+	transform: translate(1em, 4.5em);
+	color: #000000;
 }
 
-a.document-download.button {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-	background-color: #4fabc9;
-	width: 10%;
-	color: white;
-	text-align: center;
-}
-
+/* This is for the image */
 .document-preview {
-	padding-top: 17px;
+		transform: translate(13em, 6em);
+		display: block;
+}
+
+#gallery-button {
+	transform: translate(-33em, 10em);
+}
+
+
+
+
+/* ========================
+========= FOOTER ==========
+========================== */
+
+footer {
+	color: #ffffff;
+	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	margin: 0;
 }

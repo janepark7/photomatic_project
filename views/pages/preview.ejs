@@ -1,17 +1,11 @@
-<link rel="stylesheet" types="text.css" href="/css/normalize.css">
-<link rel="stylesheet" types="text.css" href="/css/skeleton.css">
-<link rel="stylesheet" types="text.css" href="/css/stylesheet.css">
-
-
-
-<div class="document">
-
+<div class="container">
 	<% if (photo.getPreviewSrc()) { %>
 		<img class="document-preview" src="<%- photo.getPreviewSrc() %>"/>
 	<% } else { %>
 		<div class="document-preview noPreview">No preview available</div>
 	<% } %>
-	<h5><%- photo.get("description") %></h5>
-
-	<a href="/photo/gallery"><button class="button" id="gallery">Gallery</button></a>
+	<h5 class="description-preview"><%- photo.get("description") %></h5>
+	<p>
+		<a href="/photo/gallery"><button id="gallery-button">Gallery</button></a>
+	</p>
 </div>

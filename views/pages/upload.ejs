@@ -1,17 +1,13 @@
-<body class="upload-container">
+<body id="landing">
+	<form class="upload" enctype="multipart/form-data" method="post">
+	<% if(typeof error !== undefined) { %>
+		<div class= "error"><%= error %></div>
+		<%}%>
+			<input type="file" name="file"/>
+			<textarea class="description-area" name="description" rows="8" cols="80" placeholder="Enter Description"></textarea>
+		<p>
+			<button id="upload">Upload<i class="far fa-images far-2x"></i></button>
+		</p>
 
-<form class="upload" enctype="multipart/form-data" method="post">
-
-<% if(typeof error !== undefined) { %>
-	<div class= "error"><%= error %></div>
-	<%}%>
-</br>
-
-	<input class= "file" type="file" name="file"/>
-	<textarea name="description" rows="8" cols="80" placeholder="Please Enter A Description"></textarea>
-
-	<button id="upload-button" class="button">Upload</button>
-
-
-</form>
+	</form>
 </body>
