@@ -4,8 +4,6 @@ const Photo = require("../models/photos.js");
 const renderTemplate = require("../utility/renderTemplate.js");
 const router = express.Router();
 
-
-
 router.post("/signup", function(req,res) {
 	User.signup(req)
 			.then(function(user) {
@@ -20,7 +18,6 @@ router.post("/signup", function(req,res) {
 					error: "Please ensure all fields are filled in properly" });
 			});
 });
-
 
 router.post("/login", function(req, res) {
 		User.login(req)
@@ -41,9 +38,6 @@ router.post("/login", function(req, res) {
 				if (photo) {
 					photo.description = req.body.description;
 					res.json({ photo: photo });
-
-
-
 				}
 				else {
 					res.status(404);
@@ -54,9 +48,6 @@ router.post("/login", function(req, res) {
 				res.status(500);
 				res.json({ error: "Unable to delete file" });
 			});
-
-
-
 	});
 
 
@@ -66,9 +57,6 @@ router.delete("/photo/:photoId", function(req, res) {
 			if (photo) {
 				photo.destroy();
 				res.json({ photo: photo });
-
-
-
 			}
 			else {
 				res.status(404);
@@ -79,15 +67,6 @@ router.delete("/photo/:photoId", function(req, res) {
 			res.status(500);
 			res.json({ error: "Unable to delete file" });
 		});
-
-
-
 });
-
-
-
-
-
-
 
 module.exports = router;

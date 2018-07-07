@@ -1,3 +1,6 @@
+JANE THIS IS YOUR CURRENT CSS
+
+
 * {
 	box-sizing: border-box;
 }
@@ -8,6 +11,18 @@ body {
 
 textarea {
 	resize: none;
+	color: #000000;
+}
+
+a {
+	text-decoration: none;
+}
+
+.login, .sign-up, .commentForm, .upload {
+	border-radius: 25px;
+	background: linear-gradient(to top, #c8cfd6, #f1f3f4);
+	position: absolute;
+	margin: 0 auto;
 }
 
 /*=======================
@@ -37,6 +52,7 @@ textarea {
  	right: 0;
 	z-index: -1;
 }
+
 ul {
 	text-align: center;
 	position: relative;
@@ -84,37 +100,18 @@ h3 {
 ==== ERROR PAGE TEXT =====
 ==========================*/
 
-.error {
+h1.error {
 	color: #b20000;
-	letter-spacing: 2px;
+	letter-spacing: 10px;
 	padding: 15px;
 	text-transform: uppercase;
+	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
+	text-align: center;
+	transform: translate(1em, 6em);
 }
 
-.errorphoto {
-	object-fit: contain;
-	height: auto;
-	width: 33%;
-	opacity: 0.3px;
-	-webkit-animation:spin 3s linear infinite;
-	 -moz-animation:spin 3s linear infinite;
-	 animation:spin 3s linear infinite;
-	}
-	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
-}
 
-.error-header {
-	background-color: #71acd6;
-	width: 100%;
-	height: 9%;
-	opacity: 0.8;
-	text-align: right;
-	padding: 15px;
-	color: white;
-	position: fixed;
-}
+/* ==== END ERROR PAGE TEXT ===== */
 
 /* ===================
 ===== NAV BAR ========
@@ -126,6 +123,10 @@ i {
 button {
 	color: #19262f;;
 	background-color: #a4d2f3;
+}
+
+button:hover {
+	color: #ffffff;
 }
 
 #signup {
@@ -176,11 +177,11 @@ button {
 	color: #f2f8fd;
 }
 
-/* ======= End Nav Bar  ======= */
+/* ======= END NAV BAR  ======= */
 
 /* ===========================
-== Login Form & Sign Up Form =
-===============================
+==== LOGIN & SIGN UP FORM ====
+==============================
 */
 
 #form-page::after {
@@ -196,13 +197,6 @@ button {
  	right: 0;
  	position: absolute;
 	z-index: -1;
-}
-
-form {
-	border-radius: 25px;
-	background: linear-gradient(to top, #c8cfd6, #f1f3f4);
-	position: absolute;
-	margin: 0 auto;
 }
 
 .sign-up {
@@ -238,6 +232,7 @@ input {
 	margin-left: 30%;
 }
 
+/* ======= END LOGIN & SIGN UP FORM  ======= */
 
 /* =============================
 ==== UPLOAD FORM  AND PAGE =====
@@ -250,13 +245,14 @@ input {
 
 .upload {
 	position: absolute;
-	width: 55%;
+	width: 45%;
 	border: 1px solid #CCC;
 	border-radius: 6px;
-	transform: translate(35%, 50%);
+	transform: translate(35%, 45%);
 	font-size: 14px;
 	color: black;
 	padding-right: 12%;
+  padding-top: 20px;
 
 }
 
@@ -270,22 +266,101 @@ input {
 	height: 2%;
 }
 
-/*
-** Comments and Likes on the Photo page
-***/
+/* ======= END UPLOAD FORM  AND PAGE ======= */
 
-.commentcontainer {
-	float: left;
+/*====================
+===== PHOTO PAGE =====
+====================== */
+
+/* ==== IMAGE ====  */
+
+.photo-full {
+	margin-top: 4%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==== END IMAGE ====  */
+
+/* ==== BUTTONS =====  */
+
+.button-rows {
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+.delete-button {
+	/* margin-left: 30%; */
+	background-color: #ff4c4c;
+	color: #ffffff;
+}
+
+.edit-button {
+	/* margin-right: 25%; */
+	background-color: #66b266;
+	color: #ffffff;
+}
+
+.delete-button, .edit-button {
+	margin-top: 2%;
+	margin-bottom: 3%;
+}
+
+.photo-description-edit {
+	height: 100px;
+	width: 500px;
+	margin-right: 32%;
+	margin-bottom: 0;
+}
+
+.user-buttons {
+	margin-left: 40%;
+	margin-right: 40%;
+}
+/* ==== END BUTTONS =====  */
+
+/* === COMMNETS DISPLAY ON PHOTO PAGE === */
+
+.username, .comment-text {
+	display: inline-block;
+	text-align: center;
 }
 
 .username {
 	color: #4fabc9;
 	font-weight: bold;
+	text-align: center;
 }
 
-.comments-comment-text {
-	word-wrap: break-word;
-	margin-left: 40%;
+.comment-text {
+	color: #000000;
+	padding-left: 20px;
+	text-align: center;
+	margin-right: 45%;
+}
+
+.comments-empty, .photo-description {
+	color: #000000;
+	text-align: center;
+}
+
+.comments-empty {
+	font-size: 20px;
+	font-style: italic;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	padding-top: 20px;
+}
+
+.photo-description {
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #4c4c4c;
+	font-size: 22px;
+	padding-top: 25px;
+	padding-bottom: 15px;
 }
 
 .userexp {
@@ -294,7 +369,7 @@ input {
 	display: block;
 }
 
-.photo-like, .delete-button.button, .comment {
+.photo-like, .delete-button.button {
 	float: left;
 }
 
@@ -310,54 +385,24 @@ input {
 	font-weight: bold;
 }
 
-.comments-empty {
-	text-align: center;
-}
-
-.photo-full {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.comment {
-	background-color: #e5e5e5;
-	flex-wrap: wrap;
-}
-
-.comments-comment {
-	word-wrap: break-word;
-}
-
-.comments-comment-text {
-	padding: 3px 75px 75px 3px;
-	text-align: center;
-}
-
 .commentcontainer {
 	text-align: center;
 }
 
-a:link {
-    text-decoration: none;
-}
-
 .photo-like {
-	background-color: #e5e5e5;
 	flex-wrap: wrap;
 }
 
-#btn-like {
-	text-align: center;
-	position: fixed;
-	bottom: 20px;
-	width: 100%;
-}
-
+/* === END COMMNETS DISPLAY ON PHOTO PAGE === */
+/* ==== END PHOTO PAGE  =====  */
 
 /* ========================
 ===== GALLERY IMAGE =======
 =========================== */
 
+.gallery {
+	position: relative;
+}
 
 .gallery-image {
 	transform: translate(-4em, 30%);
@@ -367,50 +412,18 @@ a:link {
 	height: 200px;
 }
 
-.photo-full {
-	display: block;
-	margin-top: 3%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.photo-description {
-	text-align: center;
-}
-
-
-.photo-description-edit {
-	height: 14px;
-	width: 600px;
-}
-
-
-.edit-button {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #e5e5e5;
-	flex-wrap: wrap;
-	width: 200px;
-}
-
-.delete-button.button {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #e5e5e5;
-	flex-wrap: wrap;
-}
-
 .userexp {
 	display: block;
   margin-left: auto;
   margin-right: auto
 }
 
-/*=======================
+/* ===== END GALLERY IMAGE ======= */
+
+
+/* =======================
 ======= PREVIEW =========
-=========================*/
+========================= */
 
 .preview-view {
 	position: absolute;
@@ -431,8 +444,31 @@ a:link {
 	transform: translate(-33em, 10em);
 }
 
+/* ======== END PREVIEW ========= */
 
+/* ==========================
+===== COMMENT FORM PAGE =====
+=============================  */
 
+.commentForm {
+	transform: translate(55%, 80%);
+	text-align: center;
+	width: 45%;
+	padding: 2% 0;
+}
+
+.comment-header {
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+}
+
+.comment-text-field {
+	width: 60%;
+	color: #868686;
+	margin-left: 3%;
+	letter-spacing: 2px;
+}
 
 /* ========================
 ========= FOOTER ==========
@@ -451,3 +487,5 @@ footer {
 	padding: 1rem;
 	margin: 0;
 }
+
+/* ===== END FOOTER  ===== */

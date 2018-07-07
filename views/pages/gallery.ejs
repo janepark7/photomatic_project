@@ -1,7 +1,8 @@
-<div class="gallery">
-	<% for (let i = 0; i < photos.length; i++) { %>
-		<a target="_blank" href="/photo/photo/<%- photos[i].get('id') %>">
-			<img class="gallery-image" src="<%- photos[i].getThumbnailSrc() %>"/>
-		</a>
-	<% } %>
+<div class="container">
+		<% for (let i = 0; i < photos.length; i++) { %>
+			<a target="_blank" href="/photo/photo/<%- photos[i].get('id') %>">
+				<img class="gallery-image" src="<%- photos[i].getThumbnailSrc() %>"/>
+			</a>
+		<% } %>
+	<!-- </div> -->
 </div>

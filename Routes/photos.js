@@ -94,11 +94,6 @@ router.post("/update/:photoId", function(req, res) {
 	});
 });
 
-
-
-
-
-
 router.post("/comment", function(req,res) {
 	if (!req.body.photoId || !req.body.text) {
 		return res.status(500).send("Missing required comment field");
