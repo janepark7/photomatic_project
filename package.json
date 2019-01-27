@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/justloffredo/personal_website#readme",
   "dependencies": {
+    "aws-sdk": "2.x",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.2",
     "connect-session-sequelize": "^4.1.0",

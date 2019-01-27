@@ -5,6 +5,7 @@ const express = require('express'),
  			session = require('express-session'),
       ejsLint = require('ejs-lint'),
  			connectSessionSequelize = require('connect-session-sequelize');
+      aws= require('aws-sdk');
 
 
 const sql = require('./utility/sql.js');
@@ -52,6 +53,7 @@ app.get("*", function(req, res) {
 sql.sync().then(function() {
 	console.log("Database synced");
 	const port = process.env.PORT || 3000;
+  const S3_BUCKET = process.env.S3_BUCKET;
 
 	app.listen(port, function() {
 		console.log("Listening at http://localhost:" + port);
